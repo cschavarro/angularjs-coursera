@@ -1,0 +1,26 @@
+{
+  "plugins": {
+    "guess-types": {
+      
+    },
+    "outline": {
+      
+    },
+    "angular1": {
+      
+    }
+  },
+  "libs": [
+    "ecma5",
+    "browser"
+  ],
+  "ecmaVersion": 5,
+  "ide": {
+    "scriptPaths": [
+      {
+        "type": "FOLDER",
+        "path": "src/main/resources/static/jss"
+      }
+    ]
+  }
+}
