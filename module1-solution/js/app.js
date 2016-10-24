@@ -30,7 +30,7 @@
 			var numberOfItems = 0;
 			$scope.message = '';
 			for(var i = 0; i < itemsToEatArray.length; i++) {
-				var itemToEat = itemsToEatArray[i]; 
+				var itemToEat = itemsToEatArray[i].trim(); 
 				if (itemToEat) {
 					// Add to count if not empty
 					numberOfItems++;
