@@ -1,0 +1,16 @@
+@CHARSET "utf-8";
+.error {
+	color: red !important;
+}
+
+.correct {
+	color: green;
+}
+
+.error-input {
+    border: 1px solid red;
+}
+
+.correct-input {
+	border: 1px solid green; 
+}
