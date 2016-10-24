@@ -1,5 +1,5 @@
 {
-  "ecmaVersion": 5,
+  "ecmaVersion": 6,
   "ide": {
     "scriptPaths": [
       {
@@ -13,6 +13,9 @@
       
     },
     "outline": {
+      
+    },
+    "es_modules": {
       
     },
     "angular1": {
