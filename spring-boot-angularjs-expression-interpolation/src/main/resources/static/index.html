@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-	<head> 
+<html ng-app="MsgApp">
+	<head>
 		<meta charset="ISO-8859-1">
 		<script type="text/javascript" src="jss/angular.min.js"></script>
 		<script type="text/javascript" src="jss/app/app.js"></script>
@@ -9,8 +9,15 @@
 	</head>
 	<body>
 		<h1>Expression and Interpolation</h1>
-		<div>
-			Message is: <br>			
+		<div ng-controller="MsgController">
+			{{name}} has a message is: <br>
+			{{sayMessage()}}
+			
+			<div>
+				<button ng-click="feedCristian()">Feed Cristian</button>
+				<br>
+				<img ng-src="img/cristian_{{stateOfBeing}}.gif">
+			</div>
 		</div>
 	</body>
 </html>
