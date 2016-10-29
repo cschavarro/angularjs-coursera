@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		<title>Filters</title>
+	</head>
+	<body ng-app="MsgApp">
+		<h1>Filters</h1>
+		<div ng-controller="MsgController">
+			{{ name }} has a message is: <br>
+			Original: {{ sayMessage() }} <br>
+			Upper: {{ sayMessage() | uppercase }} <br>
+			Loves: {{ sayLovesMessage() }} <br>
+			Truth: {{ sayLovesMessage() | truth : 'healthy' : 'cookie' }} <br>
+			BIG TRUTH: {{ sayLovesMessage() | truth : 'healthy' : 'cookie' | uppercase }} <br>
+			
+			<div>
+				<button ng-click="feedCristian()">Feed Cristian</button>
+				Cost: {{ cookieCost | currency : "Y$" : 4 }}
+				<br>
+				
+				<img ng-src="img/cristian_{{ stateOfBeing }}.gif">
+			</div>
+		</div>
+	</body>
+</html>
