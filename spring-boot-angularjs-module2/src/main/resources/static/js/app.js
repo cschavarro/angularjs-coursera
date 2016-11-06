@@ -110,6 +110,10 @@
 				quantity: "1"
 			},
 			{
+				name: 'Napkins',
+				quantity: "5"
+			},
+			{
 				name: 'Water',
 				quantity: "1"
 			}
