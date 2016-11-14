@@ -1,0 +1,25 @@
+<div id="menu-items" class="panel panel-default" ng-show="items.showPanel()">
+	<div class="panel-heading">Menu Items matching description</div>
+	<div class="panel-body">
+		<div class="alert alert-danger" ng-show="items.showMessage();">Nothing found</div>
+		
+		<ol ng-show="!items.showMessage();" class="list-group">
+			<li ng-repeat="item in items.founded" class="list-group-item">
+				<div id="item" class="container">
+					<div class="row" >
+					  <div class="col-xs-1">{{ item.short_name }}</div>
+					  <div class="col-xs-7">{{ item.name }}</div>
+					  <div class="col-xs-4">
+					  	<button ng-click="items.onRemove({itemIndex: $index});">
+					  		Don't want this one!
+					  	</button>
+					  </div>
+					</div>
+					<div class="row">
+					  <div class="col-sm-10" style="white-space: normal;">{{ item.description }}</div>
+					</div>
+				</div>
+			</li>
+		</ol>
+	</div>
+</div>
