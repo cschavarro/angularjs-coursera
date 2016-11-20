@@ -1,0 +1,13 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Items in <strong style="font-style: italic;">{{ menuItems.categoryName }}</strong></h4>
+  </div>
+  <div class="panel-body">
+    <ol class="breadcrumb">
+      <li><a ui-sref="home">Home</a></li>
+      <li><a ui-sref="menuCategories">Categories</a></li>
+      <li class="active">Items</li>
+    </ol>
+    <items-list items="menuItems.items"></items-list>
+  </div>
+</div>
