@@ -1,0 +1,93 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-2">
+      <form name="userForm" class="form-horizontal" novalidate>
+        <div class="form-group">
+          <label for="firstName" class="col-sm-2 control-label">First Name</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" id="firstName" ng-model="signupCtrl.user.firstName"
+            name="firstName" placeholder="First Name" required>
+          </div>
+          <div class="col-sm-5">
+            <span class="form-control-static" ng-if="userForm.firstName.$error.required && userForm.firstName.$touched">
+              First name is required!
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="lastName" class="col-sm-2 control-label">Last Name</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" id="lastName" ng-model="signupCtrl.user.lastName"
+            name="lastName" placeholder="Last Name" required>
+          </div>
+          <div class="col-sm-5">
+            <span class="form-control-static" ng-if="userForm.lastName.$error.required && userForm.lastName.$touched">
+              Last name is required!
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="col-sm-2 control-label">Email</label>
+          <div class="col-sm-5">
+            <input type="email" class="form-control" id="email" ng-model="signupCtrl.user.email"
+            name="email" placeholder="Email" required>
+          </div>
+          <div class="col-sm-5">
+            <span class="form-control-static" ng-if="userForm.email.$error.required && userForm.email.$touched">
+              Email is required!
+            </span>
+            <span class="form-control-static" ng-if="userForm.email.$invalid && userForm.email.$touched">
+              Email is invalid! Please Verified!
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="phoneNumber" class="col-sm-2 control-label">Phone Number</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" id="phoneNumber" ng-model="signupCtrl.user.phoneNumber"
+            name="phoneNumber" placeholder="Phone Number (###-###-####)" pattern="(\d{3})-(\d{3})-(\d{4})" required>
+          </div>
+          <div class="col-sm-5">
+            <span class="form-control-static" ng-if="userForm.phoneNumber.$error.required && userForm.phoneNumber.$touched">
+              Phone Number is required!
+            </span>
+            <span class="form-control-static" ng-if="userForm.phoneNumber.$invalid && userForm.phoneNumber.$touched">
+              Phone number is invalid! Please Verified (###-###-####)!
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="favoriteDish" class="col-sm-2 control-label">Favorite Dish</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" id="favoriteDish" ng-model="signupCtrl.user.favoriteDish"
+            name="favoriteDish" placeholder="Favorite dish Short name" required>
+          </div>
+          <div class="col-sm-5">
+            <span class="form-control-static" ng-if="userForm.favoriteDish.$error.required && userForm.favoriteDish.$touched">
+              Favorite dish is required!
+            </span>
+            <span ng-if="signupCtrl.signUpFailed">No such menu number exists</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-5">
+            <button class="btn btn-default" ng-disabled="userForm.$invalid" ng-click="signupCtrl.signUpUser();">Sign Up</button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-5">
+            <div class="alert alert-success" ng-if="signupCtrl.signUpSuccess">
+              Your information has been saved.
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
