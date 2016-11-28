@@ -23,9 +23,10 @@
             $ctrl.signUpSuccess = true;
             $ctrl.user = angular.copy({});
 
-            // Resets Form
+            // Reset Form
             $scope.userForm.$setPristine();
             $scope.userForm.$setUntouched();
+            $ctrl.signUpFailed = false;
           }, function (error) {
             $ctrl.signUpFailed = true;
           });
